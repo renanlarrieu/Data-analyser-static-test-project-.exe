@@ -1,3 +1,5 @@
+## atualização 
+
 # -*- coding: utf-8 -*-
 """
 Created on Fri Mar 27 22:24:04 2020
@@ -17,7 +19,7 @@ t=0
 
 print("Bem-vindo ao Graph Propulsion Maker")
 
-nome_do_arquivo = str(input('Escreva o nome do arquivo que quer abrir com o seu respectivo formato .csv: '))
+nome_do_arquivo = str(input('Escreva o nome do arquivo que quer abrir com o seu respectivo formato .csv, exemplo: "dadosdeteste.csv": '))
 
 titulo_do_grafico = str(input('Escolha o título do seu gráfico: '))
     
@@ -26,6 +28,8 @@ titulo_do_eixo_x = str(input('Escolha o nome do eixo x do seu gráfico: '))
 titulo_do_eixo_y = str(input('Escolha o nome do eixo y do seu gráfico: '))
 
 nome_da_figura = str(input('Escolha o nome da figura que será salva :'))
+
+nome_do_arquivo_de_texto = (input('Escolha o nome do arquivo de texto que será salvo contendo os cálculos presentes no código. Para isso, insira o nome do arquivo com seu respectivo formato .txt: '))
 
 #itulo_do_grafico = str('a')
     
@@ -42,33 +46,34 @@ dados = open(nome_do_arquivo).readlines() #trocar para o nome_do_arquivo após t
 
 
 
+    
 def adiciona_dados():
     for i in range (len(dados)):
         if i !=0:  
             linha = dados[i].split(";")
             x.append(float(linha[0]))
             y.append(float(linha[1])*g)
+        else:
+            print('erro1')
+
+len(x)
+len(y)
+def filtra_dados():
+    
+        for i in range(len(y)):
+            if i < 30:
+                
+                x.remove(i)
+                y.remove(i)
+            else:
+                print('erro2')
             
-            
+       
+          
         
 adiciona_dados()
-  
+filtra_dados()
 
-
-    
-#def verifica_dados():   
- #   for i in y:
-  #      
-   #     
-    #    if i < float(30):  
-     ##      y.remove(i)
-       #     x.remove(i)
-            
-        #else:  
-         #   print('deu erro')
-            
-#verifica_dados()  
-    
 #print(x)
 #print(y)    
     
@@ -119,7 +124,7 @@ print('Os resultados de seu teste são:')
 print('Impulso =',integrate(x, y),'N.s')
 integrate(x,y)
 #max(y, key=float)
-print('Fmax =',fmax,'N')
+print('Fmax =',fmax,'N)
 print('Instante Fmáx =',x[t],'s')
 print('Tempo de queima =',x[len(x)-1],'s')
 
@@ -146,7 +151,7 @@ tempo_de_queima = "Tempo de queima = {}s\n"
 
 
 
-arquivo = open("DADOS.txt","w")
+arquivo = open(nome_do_arquivo_de_texto,"w")
 
 arquivo.write(resultados)
 
