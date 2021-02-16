@@ -1,0 +1,5 @@
+Os resultados de seu teste são:
+Impulso = 791.213N.s
+Fmax = 785.674N
+Instante Fmáx = 0.598s
+Tempo de queima = 1.707s
