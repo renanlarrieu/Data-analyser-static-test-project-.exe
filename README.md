@@ -27,6 +27,4 @@ According to the tutorial, the process generates:
 
 ## HX711 use specifications
 
-In the case of `dados_teste_1.csv` all the data was capted in frequency of XX Hz
-
-Comparing the frequency select 10Hz/80Hz and the noise in the results:
+In the case of `dados_teste_1.csv` all the data was capted by 10 Hz of frequency.
