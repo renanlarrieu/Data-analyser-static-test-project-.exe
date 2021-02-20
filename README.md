@@ -28,4 +28,10 @@ Also, in the `.ino` file can be seen that the code can capture more data in addi
 
 ## HX711 use specifications
 
-In the case of [`dados_teste_1.csv`](dados_teste_1.csv) all the data were capted at 10Hz frequency.
+1. In the case of [`dados_teste_1.csv`](dados_teste_1.csv) all the data were capted at 10Hz frequency.
+
+2. But, as can be seen, the frequency can be adjusted to 80Hz, however it also increase the noise.
+
+![](./output_data_rate.png)
+
+3. The communication protocol used by the device is I2C
